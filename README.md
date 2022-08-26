@@ -22,3 +22,7 @@ sudo apt-get install ninja-build
 
 ## General
 See how different files and folder are structured, and especially the **CMakeLists.txt**
+
+sudo apt-get install libxss-dev libxxf86vm-dev libxkbfile-dev libxv-dev
+sudo apt-get install doxygen
+sudo apt-get install xorg-dev libglu1-mesa-dev
