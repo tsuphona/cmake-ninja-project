@@ -1,2 +1,4 @@
 #define cnp_VERSION_MAJOR @cnp_VERSION_MAJOR@
 #define cnp_VERSION_MINOR @cnp_VERSION_MINOR@
+
+#cmakedefine USE_ADDER
