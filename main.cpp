@@ -1,37 +1,37 @@
-#include <iostream>
-#include <adder.hpp>
 #include <GLFW/glfw3.h>
+#include <adder.hpp>
+#include <cnpConfig.h>
+#include <iostream>
 
-int main()
-{
-    std::cout << "CMake is an awesome tool!\n";
-    std::cout << "Ninja is also an awesome tool!\n";
-    std::cout << add(6.5f, 5.5f) << "\n";
+int main(int argc, char *argv[]) {
+  std::cout << "CMake is an awesome tool!\n";
+  std::cout << "Ninja is also an awesome tool!\n";
+  std::cout << add(6.5f, 5.5f) << "\n";
 
-    GLFWwindow *window;
-    int width, height;
+  std::cout << argv[0] << " Version " << cnp_VERSION_MAJOR << "."
+            << cnp_VERSION_MINOR << "\n";
 
-    if (!glfwInit())
-    {
-        fprintf(stderr, "Failed to initialize GLFW\n");
-        exit(EXIT_FAILURE);
-    }
+  GLFWwindow *window;
+  int width, height;
 
-    window = glfwCreateWindow(300, 300, "Gears", NULL, NULL);
-    if (!window)
-    {
-        fprintf(stderr, "Failed to open GLFW window\n");
-        glfwTerminate();
-        exit(EXIT_FAILURE);
-    }
+  if (!glfwInit()) {
+    fprintf(stderr, "Failed to initialize GLFW\n");
+    exit(EXIT_FAILURE);
+  }
 
-    // Main loop
-    while (!glfwWindowShouldClose(window))
-    {
-        // Swap buffers
-        glfwSwapBuffers(window);
-        glfwPollEvents();
-    }
+  window = glfwCreateWindow(300, 300, "Gears", NULL, NULL);
+  if (!window) {
+    fprintf(stderr, "Failed to open GLFW window\n");
+    glfwTerminate();
+    exit(EXIT_FAILURE);
+  }
 
-    return 0;
+  // Main loop
+  while (!glfwWindowShouldClose(window)) {
+    // Swap buffers
+    glfwSwapBuffers(window);
+    glfwPollEvents();
+  }
+
+  return 0;
 }
